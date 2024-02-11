@@ -1,6 +1,12 @@
 const form = document.querySelector("#form");
 const launchBtn = document.querySelector("#launch-btn");
-const userEmailField = document.querySelector("#user-email"); // Змінено id на вірний
+const userEmailField = document.querySelector("#user-email"); 
+const goToFormButton = document.querySelector("#go-to-form-btn");
+
+goToFormButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  form.scrollIntoView();
+});
 
 function clearFormFields() {
   const formFields = form.querySelectorAll("input");
